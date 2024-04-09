@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brokerage Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <h1>Brokerage Calculator</h1>
+            <div class="input-group">
+                <label for="buyAmount">Buy Amount:</label>
+                <input type="number" id="buyAmount" placeholder="Enter buy amount">
+            </div>
+            <div class="input-group">
+                <label for="sellAmount">Sell Amount:</label>
+                <input type="number" id="sellAmount" placeholder="Enter sell amount">
+            </div>
+            <div class="input-group">
+                <label for="numShares">Number of Shares:</label>
+                <input type="number" id="numShares" placeholder="Enter number of shares">
+            </div>
+            <br>
+            <div class="input-group">
+                <label for="brokerageApp">Select Brokerage App:</label>
+                <select id="brokerageApp">
+                    <option value="0.1" title="No minimum brokerage. 0.1% or ₹20 whichever is lower">Groww (0.1%)</option>
+                    <option value="0.03" title="₹20 per trade brokerage">Zerodha (0.03%)</option>
+                    <option value="0.1" title="₹20 per trade brokerage">Upstox (0.1%)</option>
+                    <option value="0.1" title="₹10 per trade brokerage">5paisa (0.1%)</option>
+                    <option value="0.1" title="₹20 per trade brokerage">Fyers (0.1%)</option>
+                    <option value="0.1" title="₹15 per trade brokerage">Prostocks Star (0.1%)</option>
+                    <option value="0.1" title="₹20 per trade brokerage">IIFL (0.1%)</option>
+                    <option value="0.1" title="No minimum brokerage. 0.1% or ₹20 whichever is lower">Markets.com (0.1%)</option>
+                    <option value="0.1" title="₹15 per trade brokerage">MO Trader (0.1%)</option>
+                    <option value="0.1" title="No minimum brokerage. 0.1% or ₹20 whichever is lower">Choice FinX (0.1%)</option>
+                    <option value="0.1" title="₹20 per trade brokerage">Share India (0.1%)</option>
+                    <option value="0.1" title="₹15 per trade brokerage">InvestorGain (0.1%)</option>
+                    <option value="0.25" title="₹20 per trade brokerage">Angel One (0.25%)</option>
+                    <option value="0.55" title="₹20 per trade brokerage">ICICI Direct (0.55%)</option>
+                    <!-- Add more options for other brokerage apps -->
+                </select>
+            </div>
+            <br>
+            <div class="input-group">
+                <label for="currency">Select Currency:</label>
+                <input type="radio" id="rupees" name="currency" value="rupees" checked>
+                
+                <label for="rupees">Rupees</label>
+                <input type="radio" id="dollars" name="currency" value="dollars">
+                <label for="dollars">Dollars</label>
+                
+            </div>
+            <br>
+            <button onclick="calculateBrokerage()">Calculate</button>
+            <div id="result"></div>
+        </div>
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>
